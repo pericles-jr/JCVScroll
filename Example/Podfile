@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JCVScroll_Example' do
+  pod 'JCVScroll', :path => '../'
+
+  target 'JCVScroll_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
