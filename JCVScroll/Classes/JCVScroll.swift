@@ -25,20 +25,20 @@ open class JCVScroll {
     let scrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)
     
     if scrollingDown {
-      indexForView: for i in 0..<viewConstraints.count {
+      for i in 0..<viewConstraints.count {
         if abs(viewConstraints[i].constant) < views[i].bounds.height {
           currentIndex = i
-          break indexForView
+          break
         }
       }
     }
     
     if scrollingUp {
       if currentIndex == nil {
-        indexForView: for i in (0..<viewConstraints.count).reversed() {
+        for i in (0..<viewConstraints.count).reversed() {
           if abs(viewConstraints[i].constant) > 0 {
             currentIndex = i
-            break indexForView
+            break
           }
         }
       }
