@@ -29,19 +29,9 @@ fadeColor = UIColor.black
 ```swift
 fadeAnimationSpeed = 1    /* can set this value from 0.0 to 1.0 */
 ```
-JCVScroll can handle as many views you need to collapse, there is two different methods you can use to do this:
-#### If you are collapsing a single view:
+JCVScroll can handle as many views you need to collapse:
 ```swift
-  setupSingleView(view: UIView, scrollView: UIScrollView, viewConstraint: NSLayoutConstraint)
-```
-Where:
-- view - View that will collapse.
-- scrollView - Scrollable component from the view.
-- viewConstraint - Top constraint from the collapsable view.
-
-#### Multiple views:
-```swift
-setupMultipleView(views: [UIView], scrollView: UIScrollView, viewConstraints: [NSLayoutConstraint])
+  setup(for views: [UIView], scrollView: UIScrollView, viewConstraints: [NSLayoutConstraint])
 ```
 Where:
 - view - Views that will be collapse.
@@ -50,10 +40,10 @@ Where:
 * [UIView] and [NSLayoutConstraint] must be in the same order.
 Example:
 ```swift
-let views: [UIView] = [view1,view2, view3]
+let views: [UIView] = [view1, view2, view3]
 let viewConstraints: [NSLayoutConstraint] = [topConstraintFromView1, topConstraintFromView2, topConstraintFromView3]
 
-setupMultipleView(views: views, scrollView: tableView, viewConstraints: viewConstraints)
+JCVScroll.setup(for: views, scrollView: scrollView, viewConstraints: viewConstraints)
 ```
 #### IMPORTANT: Both methods needs to be added into the delegate method scrollViewDidScroll
-Can be used on ScrollViews, TableViews and CollectionViews.
+Can be used on ScrollViews, TableViews or CollectionViews.
