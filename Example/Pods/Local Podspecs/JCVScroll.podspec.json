@@ -1,0 +1,22 @@
+{
+  "name": "JCVScroll",
+  "version": "0.1.0",
+  "summary": "A short description of JCVScroll.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Pelvs/JCVScroll",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Pelvs": "pericles-terto@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Pelvs/JCVScroll.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JCVScroll/Classes/**/*"
+}

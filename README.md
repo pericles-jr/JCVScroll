@@ -1,29 +1,59 @@
 # JCVScroll
+JCVScroll is a Swift class that contains a set of methods to create collapsable UIViews like CollapsingToolbar on Android.
 
-[![CI Status](http://img.shields.io/travis/Pelvs/JCVScroll.svg?style=flat)](https://travis-ci.org/Pelvs/JCVScroll)
-[![Version](https://img.shields.io/cocoapods/v/JCVScroll.svg?style=flat)](http://cocoapods.org/pods/JCVScroll)
-[![License](https://img.shields.io/cocoapods/l/JCVScroll.svg?style=flat)](http://cocoapods.org/pods/JCVScroll)
-[![Platform](https://img.shields.io/cocoapods/p/JCVScroll.svg?style=flat)](http://cocoapods.org/pods/JCVScroll)
+## Getting Started
+You can easily start using this tool by adding it to your project using Cocoapods, Carthage or simply adding the source JCVScroll class into the project.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-JCVScroll is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JCVScroll'
+#### Using Cocoapods
 ```
+pod "******"
+```
+#### Using Carthage
+```
+github "********"
+```
+#### Manually
+add JCVScroll.swift into your project.
 
-## Author
+## How to use
+Import JCVScroll into your class:
+```
+import JCVScroll
+```
+There is two properties you can set for the collapsing animation:
+- Fade color (Default value is UIColor.clear)
+```swift
+fadeColor = UIColor.black
+```
+- Fade Speed, smaller fadeAnimationSpeed values means faster fade animations (Default value is 1).
+```swift
+fadeAnimationSpeed = 1    /* can set this value from 0.0 to 1.0 */
+```
+JCVScroll can handle as many views you need to collapse, there is two different methods you can use to do this:
+#### If you are collapsing a single view:
+```swift
+  setupSingleView(view: UIView, scrollView: UIScrollView, viewConstraint: NSLayoutConstraint)
+```
+Where:
+- view - View that will collapse.
+- scrollView - Scrollable component from the view.
+- viewConstraint - Top constraint from the collapsable view.
 
-Pelvs, pericles-terto@hotmail.com
+#### Multiple views:
+```swift
+setupMultipleView(views: [UIView], scrollView: UIScrollView, viewConstraints: [NSLayoutConstraint])
+```
+Where:
+- view - Views that will be collapse.
+- scrollView - Scrollable component from the view.
+- viewConstraint - Top constraint from each collapsable view.
+* [UIView] and [NSLayoutConstraint] must be in the same order.
+Example:
+```swift
+let views: [UIView] = [view1,view2, view3]
+let viewConstraints: [NSLayoutConstraint] = [topConstraintFromView1, topConstraintFromView2, topConstraintFromView3]
 
-## License
-
-JCVScroll is available under the MIT license. See the LICENSE file for more info.
+setupMultipleView(views: views, scrollView: tableView, viewConstraints: viewConstraints)
+```
+#### IMPORTANT: Both methods needs to be added into the delegate method scrollViewDidScroll
+Can be used on ScrollViews, TableViews and CollectionViews.

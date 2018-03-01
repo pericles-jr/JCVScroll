@@ -1,0 +1,6 @@
+framework module Pods_JCVScroll_Example {
+  umbrella header "Pods-JCVScroll_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

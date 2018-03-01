@@ -1,0 +1,6 @@
+framework module JCVScroll {
+  umbrella header "JCVScroll-umbrella.h"
+
+  export *
+  module * { export * }
+}
