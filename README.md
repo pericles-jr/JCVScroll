@@ -6,7 +6,7 @@ You can easily start using this tool by adding it to your project using Cocoapod
 
 #### Using Cocoapods
 ```
-pod "******"
+pod 'JCVScroll'
 ```
 #### Using Carthage
 ```
