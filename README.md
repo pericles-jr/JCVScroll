@@ -38,7 +38,7 @@ Where:
 - scrollView - Scrollable component from the view.
 - viewConstraint - Top constraint from each collapsable view.
 * [UIView] and [NSLayoutConstraint] must be in the same order.
-####Example:
+#### Example:
 ```swift
 let views: [UIView] = [view1, view2, view3]
 let viewConstraints: [NSLayoutConstraint] = [topConstraintFromView1, topConstraintFromView2, topConstraintFromView3]
