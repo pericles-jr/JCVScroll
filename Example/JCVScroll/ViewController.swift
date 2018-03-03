@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         
-        JCVScroll.fadeColor = .white
+        JCVScroll.fadeColors = [.red , .blue, .white]
         JCVScroll.fadeAnimationSpeed = 0.8
     }
     
