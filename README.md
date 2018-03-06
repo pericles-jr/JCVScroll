@@ -1,6 +1,8 @@
 # JCVScroll
 JCVScroll is a Swift class that contains a set of methods to create collapsable UIViews like CollapsingToolbar on Android.
 
+![Arrow](https://github.com/Pelvs/JCVScroll/blob/master/Exampple.gif)
+
 ## Getting Started
 You can easily start using this tool by adding it to your project using Cocoapods, Carthage or simply adding the source JCVScroll class into the project.
 
